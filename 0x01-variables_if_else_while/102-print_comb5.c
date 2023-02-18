@@ -27,11 +27,11 @@ int main(void)
 				putchar(' ');
 				putchar(j1);
 				putchar(j2);
-			}
-			if (k1 != 98)
-			{
-				putchar(',');
-				putchar(' ');
+				if ((k1 * 100 + k2) != 9899)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 			k2++;
 		}
