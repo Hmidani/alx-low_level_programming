@@ -10,7 +10,7 @@ int main(void)
 	int i, length;
 
 	length = (int)(sizeof(txt) / sizeof(txt[0]));
-	for (i = 0; i <= length; i++)
+	for (i = 0; i < length - 1; i++)
 	{
 		_putchar(txt[i]);
 	}
