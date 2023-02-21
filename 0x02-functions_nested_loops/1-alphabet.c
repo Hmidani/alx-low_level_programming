@@ -1,12 +1,18 @@
-#include <stdio.h>
+#include <unistd.h>
 #include "main.h"
+
 /**
- * main - A programm that prints the alphabet, in lowercase
- * Return: 0 (Success)
+ * print_alphabet - prints alphabets
+ *
+ * Return: 0 success
  */
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	_putchar('\n');
-	return (0);
+	char alpha = 'a';
+
+	while (alpha <= 'z')
+	{
+		_putchar(alpha);
+		alpha++;
+	}
 }
