@@ -2,9 +2,11 @@
 #include "main.h"
 
 /**
- * _islower - test alphabet if lower or not
+ * _islower - test alphabet if lower or not.
+ * @c: The character to test.
  *
  * Return: 0 success
+ *On error, -1 is returned, and errno is set appropriately.
  */
 int _islower(int c)
 {
