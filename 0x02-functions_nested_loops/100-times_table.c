@@ -25,8 +25,8 @@ void print_times_table(int n)
 			if (c > 99)
 			{
 				y = (c - (c % 10)) / 10;
-				_putchar('0' + ((y - y % 10) / 10));
-				_putchar('0' + (y / 10) % 10);
+				_putchar('0' + ((y - (y % 10)) / 10));
+				_putchar('0' + y % 10);
 				_putchar('0' + c % 10);
 			}
 			else if (c > 9)
