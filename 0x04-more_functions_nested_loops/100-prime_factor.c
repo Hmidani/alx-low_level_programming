@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 
 /**
  * main - a program that finds, prints the largest prime factor of the number.
@@ -13,7 +14,7 @@ int main(void)
 	double sqr;
 
 	num = 612852475143;
-	sqr = (num)^(1/2);
+	sqr = sqrt(num);
 
 	for (i = 1; i <= sqr; i++)
 	{
