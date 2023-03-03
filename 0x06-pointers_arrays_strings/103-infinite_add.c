@@ -1,18 +1,82 @@
 #include "main.h"
 
+char *add_strings(char *n1, char *n2, char *r, int r_index);
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
+
 /**
- * swap_int - a function that swaps the values of two integers..
- * @a: the first input.
- * @b: the second input.
+ * add_strings  - a function that adds two numbers.
+ * @n1: the first String.
+ * @n2: the second String.
+ * @r: the third String.
+ * @r_index: the integer input.
  *
- * Return: 0 always
+ * Return: String value.
  */
 
-void swap_int(int *a, int *b)
+char *add_strings(char *n1, char *n2, char *r, int r_index)
 {
-	int c;
+	int num, tens = 0;
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	for (; *n1 && *n2; n1--, n2--, r_index--)
+	{
+		num = (*n1 - '0') + (*n2 - '0');
+		num += tens;
+		*(r + r_index) = (num % 10) + '0';
+		tens = num / 10;
+	}
+	for (; *n1; n1--, r_index--)
+	{
+		num = (*n1 - '0') + tens;
+		*(r + r_index) = (num % 10) + '0';
+		tens = num / 10;
+	}
+	for (; *n2; n2--, r_index--)
+	{
+		num = (*n2 - '0') + tens;
+		*(r + r_index) = (num % 10) + '0';
+		tens = num / 10;
+	}
+	if (tens && r_index >= 0)
+	{
+		*(r + r_index) = (tens % 10) + '0';
+		return (r + r_index);
+	}
+	else if (tens && r_index < 0)
+		return (0);
+	return (r + r_index + 1);
+}
+
+/**
+ * infinite_add - a function that adds two numbers.
+ * @n1: the first String.
+ * @n2: the second String.
+ * @r: the third String.
+ * @size_r: the integer input.
+ *
+ * Return: String value.
+ */
+
+char *infinite_add(char *n1, char *n2, char *r, int size_r)
+{
+	int i, n1len = 0, n2len = 0;
+
+	for (i = 0; *(n1 + i); i++)
+	{
+		n1len++;
+	}
+	for (i = 0; *(n2 +i); i++)
+	{
+		n2len++;
+	}
+
+	if (size_r <= n1len + 1 || size_r <= n2len + 1)
+	{
+		return (0);
+	}
+
+	n1 += n1len - 1;
+	n2 += n2len - 1;
+	*(r + size_r) = '\0';
+
+	return (add_strings(n1, n2, r, --size_r));
 }
