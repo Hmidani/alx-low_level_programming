@@ -1,11 +1,9 @@
 #include <stdio.h>
-
 /**
  * main - a magic function for task 10.
  *
  * Return: 0 always.
  */
-
 int main(void)
 {
 	int n;
@@ -16,6 +14,7 @@ int main(void)
 	p = &n;
 /*
 * write your line of code here...
+*
 */
 	*(p + 5) = 98;
 /* ...so that this prints 98\n */
