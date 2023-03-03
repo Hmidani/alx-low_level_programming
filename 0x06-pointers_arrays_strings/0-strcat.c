@@ -1,18 +1,26 @@
 #include "main.h"
 
 /**
- * swap_int - a function that swaps the values of two integers..
- * @a: the first input.
- * @b: the second input.
+ * _strcat - a function that concatenates two strings.
+ * @dest: the first String.
+ * @src: the second String.
  *
- * Return: 0 always
+ * Return: String value always
  */
 
-void swap_int(int *a, int *b)
+char *_strcat(char *dest, char *src)
 {
-	int c;
+	int i = 0, length = 0;
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	while (dest[i++])
+	{
+		length++;
+	}
+
+	for (i = 0; src[i]; i++)
+	{
+		dest[length++] = src[i];
+	}
+
+	return (dest);
 }
