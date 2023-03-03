@@ -1,18 +1,40 @@
 #include "main.h"
 
 /**
- * swap_int - a function that swaps the values of two integers..
- * @a: the first input.
- * @b: the second input.
+ * cap_string - a function that capitalizes all words of a string.
+ * @S: the String input.
  *
- * Return: 0 always
+ * Return: String value
  */
 
-void swap_int(int *a, int *b)
+char *cap_string(char *S)
 {
-	int c;
+	int i = 0;
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	while (S[i])
+	{
+	while (!(S[i] >= 'a' && S[i] <= 'z'))
+	{
+		i++;
+	}
+
+	if (S[i - 1] == ' ' ||
+	    S[i - 1] == '\t' ||
+	    S[i - 1] == '\n' ||
+	    S[i - 1] == ',' ||
+	    S[i - 1] == ';' ||
+	    S[i - 1] == '.' ||
+	    S[i - 1] == '!' ||
+	    S[i - 1] == '?' ||
+	    S[i - 1] == '}' ||
+	    S[i - 1] == '{' ||
+	    S[i - 1] == '(' ||
+	    S[i - 1] == ')' ||
+	    S[i - 1] == '"')
+	{
+		S[i] = S[i] - 32;
+	}
+	i++;
+	}
+	return (S);
 }
