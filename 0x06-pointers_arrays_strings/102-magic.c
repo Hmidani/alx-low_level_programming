@@ -1,5 +1,12 @@
 #include <stdio.h>
 
+/**
+ * main - a magic function for task 10.
+ *
+ * Return: 0 always.
+ *
+ */
+
 int main(void)
 {
 	int n;
