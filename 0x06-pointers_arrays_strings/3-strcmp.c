@@ -1,18 +1,20 @@
 #include "main.h"
 
 /**
- * swap_int - a function that swaps the values of two integers..
- * @a: the first input.
- * @b: the second input.
+ * _strcmp - a function that swaps the values of two integers..
+ * @s1: the first String.
+ * @s2: the second String.
  *
- * Return: 0 always
+ * Return: a Integer value.
  */
 
-void swap_int(int *a, int *b)
+int _strcmp(char *s1, char *s2)
 {
-	int c;
+	while (*s1 && *s2 && *s1 == *s2)
+	{
+		s1++;
+		s2++;
+	}
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	return (*s1 - *s2);
 }
