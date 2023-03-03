@@ -1,18 +1,22 @@
 #include "main.h"
 
 /**
- * swap_int - a function that swaps the values of two integers..
+ * reverse_array - a function that reverses the content of
+ * an array of integers.
  * @a: the first input.
- * @b: the second input.
+ * @n: the second input.
  *
  * Return: 0 always
  */
 
-void swap_int(int *a, int *b)
+void reverse_array(int *a, int n)
 {
-	int c;
+	int i, j;
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	for (i = 0; i < n--; i++)
+	{
+		j = a[i];
+		a[i] = a[n];
+		a[n] = j;
+	}
 }
