@@ -1,18 +1,49 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * swap_int - a function that swaps the values of two integers..
- * @a: the first input.
- * @b: the second input.
- *
- * Return: 0 always
+ * print_buffer - Prints a buffer 10 bytes at a time, starting wit.
+ *                the byte position, then showing.
+ *                then displaying printable charcaters.
+ * @b: The buffer to be printed.
+ * @size: The number of bytes to be printed from the buffer.
  */
-
-void swap_int(int *a, int *b)
+void print_buffer(char *b, int size)
 {
-	int c;
+	int byte, index;
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	for (byte = 0; byte < size; byte += 10)
+	{
+		printf("%08x: ", byte);
+
+		for (index = 0; index < 10; index++)
+		{
+			if ((index + byte) >= size)
+				printf("  ");
+
+			else
+				printf("%02x", *(b + index + byte));
+
+			if ((index % 2) != 0 && index != 0)
+				printf(" ");
+		}
+
+		for (index = 0; index < 10; index++)
+		{
+			if ((index + byte) >= size)
+				break;
+
+			else if (*(b + index + byte) >= 31 && *(b + index + byte) <= 126)
+				printf("%c", *(b + index + byte));
+
+			else
+				printf(".");
+		}
+		if (byte >= size)
+			continue;
+		printf("\n");
+	}
+	if (size <= 0)
+		printf("\n");
 }
+
