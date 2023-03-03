@@ -1,18 +1,29 @@
 #include "main.h"
 
 /**
- * swap_int - a function that swaps the values of two integers..
- * @a: the first input.
- * @b: the second input.
+ * rot13 - a function that encodes a string using rot13.
+ * @S: the String input.
  *
- * Return: 0 always
+ * Return: String Value
  */
 
-void swap_int(int *a, int *b)
+char *rot13(char *S)
 {
-	int c;
+	int i, j;
+	char s1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char s2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	for (i = 0; S[i] != '\0'; i++)
+	{
+		for (j = 0; j < 52; j++)
+		{
+			if (S[i] == s1[j])
+			{
+				S[i] = s2[j];
+				break;
+			}
+		}
+	}
+
+	return (S);
 }
