@@ -1,18 +1,25 @@
 #include "main.h"
 
 /**
- * swap_int - a function that swaps the values of two integers..
- * @a: the first input.
- * @b: the second input.
+ * string_toupper - a function that changes all lowercase
+ * letters of a string to uppercase.
+ * @S: a String input..
  *
  * Return: 0 always
  */
 
-void swap_int(int *a, int *b)
+char *string_toupper(char *S)
 {
-	int c;
+	int i = 0;
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	while (S[i])
+	{
+		if (S[i] >= 'a' && S[i] <= 'z')
+		{
+			S[i] = S[i] - 32;
+		}
+		i++;
+	}
+
+	return (S);
 }
