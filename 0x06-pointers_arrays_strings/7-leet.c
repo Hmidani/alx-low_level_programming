@@ -1,18 +1,28 @@
 #include "main.h"
 
 /**
- * swap_int - a function that swaps the values of two integers..
- * @a: the first input.
- * @b: the second input.
+ * leet - a function that encodes a string into 1337.
+ * @S: the String input.
  *
- * Return: 0 always
+ * Return: String value.
  */
 
-void swap_int(int *a, int *b)
+char *leet(char *S)
 {
-	int c;
+	int i, j;
+	char s1[] = "aAeEoOtTlL";
+	char s2[] = "4433007711";
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	for (i = 0; S[i] != '\0'; i++)
+	{
+		for (j = 0; j < 10; j++)
+		{
+			if (S[i] == s1[j])
+			{
+				S[i] = s2[j];
+			}
+		}
+	}
+
+	return (S);
 }
