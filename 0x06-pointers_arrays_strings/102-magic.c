@@ -1,18 +1,29 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * swap_int - a function that swaps the values of two integers..
- * @a: the first input.
- * @b: the second input.
+ * main - a magic function
  *
  * Return: 0 always
  */
 
-void swap_int(int *a, int *b)
+int main(void)
 {
-	int c;
+	int n;
+	int a[5];
+	int *p;
 
-	c = *a;
-	*a = *b;
-	*b = c;
+	a[2] = 1024;
+	p = &n;
+	/*
+	* write your line of code here...
+	* Remember:
+	* - you are not allowed to use a
+	* - you are not allowed to modify p
+	* - only one statement
+	* - you are not allowed to code anything else than this line of code
+	*/
+	*(p + 5) = 98;
+	/* ...so that this prints 98\n */
+	printf("a[2] = %d\n", a[2]);
+	return (0);
 }
