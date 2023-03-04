@@ -64,7 +64,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	{
 		n1len++;
 	}
-	for (i = 0; *(n2 +i); i++)
+	for (i = 0; *(n2 + i); i++)
 	{
 		n2len++;
 	}
