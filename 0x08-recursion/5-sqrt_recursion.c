@@ -3,7 +3,8 @@
 int aktuell_sqrt_recursion(int a, int b);
 
 /**
- * _sqrt_recursion - a function that returns the natural square root of a number.
+ * _sqrt_recursion - a function that returns the natural square
+ * root of a number.
  * @n: the integer input.
  *
  * Return: an integer value.
@@ -19,8 +20,8 @@ int _sqrt_recursion(int n)
 /**
  * aktuell_sqrt_recursion - a fonction that returns recurses
  * to find the natural square root of an number
- * @n: the first input.
- * @i: the second input.
+ * @a: the first input.
+ * @b: the second input.
  *
  * Return: an integer value.
  */
