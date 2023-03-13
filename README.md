@@ -1,2 +1,1 @@
-#this is readme file for repository of alx-low_level_programming
-
+this is the readme file of alx low level programming
