@@ -2,7 +2,8 @@
 #include <stdlib.h>
 
 /**
- * create_array - Float like a butterfly, sting like a bee.
+ * create_array - a function that creates an array of chars,
+ * and initializes it with a specific char.
  * @size: the size integer input.
  * @c: the string input.
  *
