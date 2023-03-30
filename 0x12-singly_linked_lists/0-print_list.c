@@ -3,9 +3,9 @@
 
 /**
  * print_list - a function that prints all the elements of a list_t list.
- * @h: pointer to the list_t list to print.
+ * @h: the input type list_t
  *
- * Return: an value type size_t.
+ * Return: the number of nodes
  */
 
 size_t print_list(const list_t *h)
