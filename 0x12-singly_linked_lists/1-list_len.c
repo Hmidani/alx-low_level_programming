@@ -2,11 +2,11 @@
 #include "lists.h"
 
 /**
- * list_len - a function that adds a new node at the beginning
- * of a list_t list.
+ * list_len - a function that returns the number of elements
+ * in a linked list_t list.
  * @h: pointer to the list_t list
  *
- * Return: the address of the new element, or NULL if it failed
+ * Return: the number of nodes
  */
 
 size_t list_len(const list_t *h)
