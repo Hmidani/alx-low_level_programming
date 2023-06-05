@@ -1,7 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdlib.h>
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -31,7 +30,7 @@ char *_strstr(char *haystack, char *needle);
 int add(int a, int b);
 int sub(int c, int d);
 int mul(int e, int f);
-int divv(int g, int h);
+int div(int g, int h);
 int mod(int e, int f);
 
 #endif
